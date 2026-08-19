@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main class="page-shell">
+			<header class="page-header">
+				<h1>Debounce у дії</h1>
+			</header>
+
+			<section class="lesson-grid" aria-label="Інтерактивні завдання">
+				<article class="lesson-card slider-card">
+					<div class="card-heading">
+						<span class="task-number">01</span>
+						<div>
+							<p class="card-kicker">Range slider</p>
+							<h2>Зміна розміру зображення</h2>
+						</div>
+					</div>
+
+					<div class="slider">
+						<div class="slider__meta">
+							<label for="image-size">Розмір зображення</label>
+							<output id="image-size-value" for="image-size">50%</output>
+						</div>
+						<input
+							type="range"
+							min="1"
+							max="100"
+							value="50"
+							class="slider__input"
+							id="image-size"
+							aria-label="Розмір зображення у відсотках"
+						/>
+						<div class="image-stage">
+							<img
+								src="../2/images.jpeg"
+								alt="Демонстраційне зображення"
+								class="slider__image"
+							/>
+						</div>
+					</div>
+				</article>
+
+				<article class="lesson-card move-card">
+					<div class="card-heading">
+						<span class="task-number">02</span>
+						<div>
+							<p class="card-kicker">Mouse movement</p>
+							<h2>Плавний рух об'єкта</h2>
+						</div>
+					</div>
+
+					<div class="movement-area" id="movement-area" aria-label="Область для руху об'єкта">
+						<div id="box" aria-label="Рухомий об'єкт"></div>
+						<span class="movement-hint">Рухайте мишкою в цій області</span>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+		<script src="javaskript.js"></script>
+	</body>
+</html>
